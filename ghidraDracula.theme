@@ -1,0 +1,139 @@
+name = Dracula
+lookAndFeel = Flat Dark
+useDarkDefaults = true
+
+// ============================================================
+//  Dracula theme for Ghidra - github.com/fredevsec
+//  ============================================================
+
+// ---- Official Dracula palette ----
+color.custom.background  = #343746   // Background (lightened to match reference)
+color.custom.bgdarker    = #282a36   // one step down - borders/headers/tooltips
+color.custom.bgdarkest   = #21222c   // deepest - dividers/scrollbars
+color.custom.bglighter   = #424556   // lighter - input fields/hover
+color.custom.currentline = #44475a   // Current Line / Selection
+color.custom.foreground  = #f8f8f2   // Foreground
+color.custom.comment     = #6272a4   // Comment
+color.custom.cyan        = #8be9fd   // Cyan
+color.custom.green       = #50fa7b   // Green
+color.custom.orange      = #ffb86c   // Orange
+color.custom.pink        = #ff79c6   // Pink
+color.custom.purple      = #bd93f9   // Purple
+color.custom.red         = #ff5555   // Red
+color.custom.yellow      = #f1fa8c   // Yellow
+
+// ---- Core UI colors ----
+color.bg          = color.custom.background
+color.bg.tree     = color.custom.background
+color.fg          = color.custom.foreground
+color.cursor.focused = color.custom.pink
+
+// ---- Decompiler ----
+color.fg.decompiler.comment         = color.custom.comment
+color.fg.decompiler.keyword         = color.custom.pink
+color.fg.decompiler.type            = color.custom.cyan
+color.fg.decompiler.function.name   = color.custom.green
+color.fg.decompiler.variable        = color.custom.foreground
+color.fg.decompiler.parameter       = color.custom.orange
+color.fg.decompiler.constant        = color.custom.purple
+color.fg.decompiler.global          = color.custom.purple
+color.bg.decompiler.current.variable = color.custom.currentline
+color.bg.decompiler.highlights.default = color.custom.currentline
+
+// ---- Listing: comments ----
+color.fg.listing.comment.auto            = color.custom.comment
+color.fg.listing.comment.eol             = color.custom.comment
+color.fg.listing.comment.plate           = color.custom.comment
+color.fg.listing.comment.post            = color.custom.comment
+color.fg.listing.comment.pre             = color.custom.comment
+color.fg.listing.comment.ref.repeatable  = color.custom.comment
+color.fg.listing.comment.repeatable      = color.custom.comment
+
+// ---- Listing: code ----
+color.fg.listing.mnemonic            = color.custom.pink
+color.fg.listing.mnemonic.override   = color.custom.cyan
+color.fg.listing.register            = color.custom.orange
+color.fg.listing.constant            = color.custom.purple
+color.fg.listing.address             = color.custom.comment
+color.fg.listing.bytes               = color.custom.comment
+color.fg.listing.underline           = color.custom.pink
+
+// ---- Listing: labels / functions / xrefs ----
+color.fg.listing.function.name           = color.custom.green
+color.fg.listing.function.variable       = color.custom.orange
+color.fg.listing.function.param.dynamic  = color.custom.orange
+color.fg.listing.function.tag            = color.custom.cyan
+color.fg.listing.block.start             = color.custom.pink
+color.fg.listing.label.local             = color.custom.green
+color.fg.listing.label.primary           = color.custom.cyan
+color.fg.listing.label.non.primary       = color.custom.foreground
+color.fg.listing.xref                    = color.custom.cyan
+color.fg.listing.xref.read               = color.custom.cyan
+color.fg.listing.xref.write              = color.custom.red
+color.fg.listing.ext.entrypoint          = color.custom.green
+color.fg.listing.ext.ref.resolved        = color.custom.purple
+color.fg.listing.ext.ref.unresolved      = color.custom.red
+
+// ---- Selection / highlight backgrounds ----
+color.bg.selection   = color.custom.currentline
+color.bg.undefined   = color.custom.currentline
+color.bg.highlight   = color.custom.currentline
+color.bg.currentline = color.custom.currentline
+color.bg.listing.highlighter.default        = color.custom.currentline
+color.bg.listing.highlighter.scoped.read    = color.custom.green
+color.bg.listing.highlighter.scoped.write   = color.custom.red
+
+// ---- Headers / fields ----
+color.bg.header.active   = color.custom.purple
+color.bg.header.inactive = color.custom.bgdarker
+color.fg.header.active   = color.custom.background
+color.fg.header.inactive = color.custom.foreground
+color.bg.filterfield     = color.custom.bglighter
+color.fg.filterfield     = color.custom.foreground
+
+// ---- Console ----
+color.fg.interpreterconsole.error = color.custom.red
+color.fg.consoletextpane          = color.custom.foreground
+
+// ---- Flow arrows ----
+color.fg.listing.flow.arrow.selected = color.custom.pink
+color.fg.listing.flow.arrow.active   = color.custom.green
+color.fg.listing.flow.arrow.inactive = color.custom.comment
+
+// ---- Overview bar ----
+color.bg.plugin.overview.address.function     = color.custom.green
+color.bg.plugin.overview.address.instruction  = color.custom.pink
+color.bg.plugin.overview.address.data         = color.custom.cyan
+color.bg.plugin.overview.address.undefined    = color.custom.currentline
+color.bg.plugin.overview.address.uninitialized = color.custom.comment
+color.bg.plugin.overview.address.external.ref = color.custom.purple
+
+// ---- Bookmarks ----
+color.bg.plugin.bookmark.note     = color.custom.purple
+color.bg.plugin.bookmark.default  = color.custom.yellow
+color.bg.plugin.bookmark.info     = color.custom.cyan
+color.bg.plugin.bookmark.warning  = color.custom.orange
+color.bg.plugin.bookmark.analysis = color.custom.green
+color.bg.plugin.bookmark.error    = color.custom.red
+
+// ---- View / system ----
+[color]system.color.bg.view = color.custom.background
+[color]system.color.fg.view = color.custom.foreground
+
+// ============================================================
+//  GLOBAL UI  (FlatLaf system colors)
+//  These paint the WHOLE interface: project window, toolbars,
+//  menus, trees, tables, fields, scrollbars and dividers.
+// ============================================================
+[color]system.color.bg.control       = color.custom.background    // panels, toolbars, menus, project window
+[color]system.color.fg.control       = color.custom.foreground   // text on panels/menus
+[color]system.color.bg.selected      = color.custom.currentline  // selection background
+[color]system.color.fg.selected      = color.custom.foreground
+[color]system.color.bg.selected.view = color.custom.currentline  // tree/table/list selection
+[color]system.color.fg.selected.view = color.custom.foreground
+[color]system.color.bg.border        = color.custom.bgdarker     // borders, scrollbars, split dividers
+[color]system.color.fg.disabled      = color.custom.comment      // disabled/greyed text
+[color]system.color.bg.tooltip       = color.custom.bgdarker
+
+// ---- Font (change if you prefer another monospace) ----
+font.monospaced = Monospaced-PLAIN-12
